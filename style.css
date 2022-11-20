@@ -1,0 +1,277 @@
+/*Heading 1 responsive strats here*/
+h1::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+  h1:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  h1::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: rgb(48, 186, 255);
+    z-index: -1;
+    transition: transform .3s ease;
+  }
+  
+  h1 {
+    position: relative;
+    font-size: 5rem;
+    cursor:pointer;
+  }
+/*Heading 1 responsive ends here*/
+body {
+    font-size: 14px;
+    color: #fff;
+    background-color: #1a242e;
+    padding-top: 80px;
+}
+.darkmode{
+    background-color: white;
+    color: #1a242e;
+}
+#darklight{
+    width: 4%;
+    height:3%;
+    float: right;
+    margin-top:9px;
+    margin-right: 10px;
+    background-color: transparent;
+    border: 0;
+}
+#darklight img{
+    width: 100%;
+    height:100%;
+}
+.main-header {
+    padding:15px 0px;
+    height: 70px;
+    background-color: #1a242e;
+}
+#signin:hover{
+    color:rgb(196, 196, 196);
+    transform: scale(1.03);
+}
+.main-header .navbar-brand {
+    background: url('https://i.postimg.cc/BnWBVtY4/download.png') no-repeat center center transparent;
+    height: 40px;
+    width: 168px;
+    display: block;
+    text-indent: -9999px;
+    background-size: 100px;
+}
+.main-header .dropdown-menu {
+    width:455px;
+    background-color: #252e39;
+}
+.main-header .dropdown-menu > li > ul {
+    float:left;
+    padding-left: 0px;
+    min-width: 150px;
+    }
+.main-header .dropdown-menu > li > ul + ul {
+    border-left:1px solid #0f171e;
+}
+.main-header .dropdown-menu > li > ul > li {
+    list-style-type:none;
+}
+
+.main-header .dropdown-menu > li > ul > li > a {
+    color:#c4cacf;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;    
+    transition: all 0.5s ease-out;
+}
+.main-header .navbar-nav > li > a {
+    font-size:17px;
+}
+.main-header .dropdown-menu > li > ul > li > a:hover {
+    background-color:#566b84;
+}
+#fixed{
+    color:#fff !important;
+}
+button:hover{
+    transform: scale(1.04);
+    transition: transform 230ms ease-in-out;
+}
+.btn{
+    border-radius: 30px;
+}
+.welcome-banner {
+    background: linear-gradient(
+        to right,
+        #000 40%,
+        transparent 100%
+      ),
+      url('./primebg11.webp');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    min-height:600px;
+    margin-top: -10px;
+}
+.left-sidebar h4 {
+    font-size:20px;
+    padding-top:20px;
+    line-height:24px;
+}
+.cta-block {
+    padding-top:40px;
+}
+.cta-block .btn {
+    height:55px;
+    border-radius:0px;
+    font-size:17px;
+}
+.cta-block p {
+    font-size:14px;
+    margin-top:10px;
+}
+.line-divider {
+    position:relative;
+}
+.line-divider:after {
+    position:absolute;
+    display:block;
+    height:1px;
+    width:100%;
+    content:"";
+    background-color: white;
+    top: 10px;
+}
+.line-divider span {
+    background-color:#000;
+    padding-left:20px;
+    padding-right:20px;
+    display:inline-block;
+    position:relative;
+    z-index:1;
+}
+.banner-image-left {
+    background:
+      url('./rentals.png')no-repeat center left transparent;
+      background-repeat: no-repeat;
+      background-size: 600px 400px;
+      background-position: 40px;
+    min-height:675px;
+}
+.right-sidebar, .left-sidebar {
+    padding-top:180px;
+}
+.right-sidebar h4 {
+    font-size:20px;
+    padding-top:20px;
+    line-height:24px;
+}
+.cta-block-button .btn {
+    height:55px;
+    border-radius:0px;
+    font-size:17px;
+    padding: 0px 100px;
+    margin-top:30px;
+}
+.banner-image-right {
+    background: url('./membership2.png') no-repeat center right transparent;
+    background-size: 600px 400px;
+    background-position: 875px;
+    min-height:675px;
+    margin-top: -75px;
+}
+.left-sidebar p {
+    margin-top:25px;
+    font-size: 15px;
+}
+.banner-remote {
+    background:
+      url('./remote.webp') no-repeat center left transparent;
+      background-repeat: no-repeat;
+      background-size: 600px 400px;
+      background-position: 40px;
+      min-height:675px;
+      margin-top: -75px;
+}
+.banner-middle img {
+    display:inline-block;
+}
+.wrapper {
+    padding-top:60px;
+    margin-top: -75px;
+}
+#img-journey{
+    width: 69%;
+}
+.img-responsive{
+    cursor: pointer;
+}
+.banner-middle p {
+    font-size:20px;
+    font-weight:inherit;
+}
+.banner-remote-right {
+    background: url('./family.png') no-repeat center right transparent;
+    min-height:675px;
+    background-size: 600px 400px;
+    background-position: 875px;
+}
+.banner-anime-left {
+    background:
+      url('./anime.jpg') no-repeat center left transparent;
+      background-repeat: no-repeat;
+      background-size: 600px 400px;
+      background-position: 40px;
+      min-height:675px;
+      margin-top: -75px;
+}
+.footer img{
+    display:inline-block;
+    height:40px;
+    
+}
+.footer {    
+    padding-top: 10px;
+    padding-bottom:10px;
+    background-color: #1a242e;
+    margin-top: -75px;
+}
+.footer p span {
+    color:white;
+}
+@media screen and (min-width:1400px) {
+    .container {
+        width:1400px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .welcome-banner {
+        background-position: 0% top;        
+    }   
+    .banner-image-left {
+        background-position: 55% top;
+    }
+    .banner-image-right{
+        background-position: 30% top;
+    }
+    .banner-remote{
+        background-position: 23% top;
+    }
+    .banner-middle h1 {
+        font-size:20px;
+    }
+    .banner-middle p {
+        font-size:15px;
+    }
+    .banner-remote-right {
+        background-position: 51% top;
+    }
+}
+
+
+
+
