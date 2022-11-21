@@ -58,6 +58,17 @@ h1::before {
 }
 
 /*Coupon eneds here*/
+/*geolocation strats*/
+#location{
+    background-color: transparent;
+    border: 0;
+}
+#weather{
+    font-weight: 500;
+    margin-top: 11%;
+    color: #fff !important;
+}
+/*geolocation ends*/
 body {
     font-size: 14px;
     color: #fff;

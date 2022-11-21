@@ -21,8 +21,12 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" id="location" onclick="geolocation()"><span class="glyphicon glyphicon-map-marker"></span>Location
+              <li><p id="weather"></p>
+              </li>
+            </a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="glyphicon glyphicon-globe"></span> EN<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-globe"></span> EN<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li>
                   <ul>
@@ -51,8 +55,10 @@
             </li>
             <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
             <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
+            
           </ul>
           <li><button id="darklight" onclick="darkmode()"><img src="./darklight.jpg" alt="darlmode"></button></li>
+          
         </div>
       </div>
     </nav>
@@ -196,5 +202,34 @@
 
     <script src="dist/js/jquery.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
+    <script>
+      let y = document.getElementById('weather');
+
+      function geolocation(){
+        if(navigator.geolocation){
+          navigator.geolocation.getCurrentPosition(showPosition)
+        }else{
+          x.innerText = "Geo Not Supported"
+        }
+      }
+
+      function showPosition(data){
+        console.log(data);
+        let lat = data.coords.latitude;
+        let long = data.coords.longitude;
+        const url = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${long}&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`
+        ///api calling
+        fetch(url,{method: 'GET'})
+        //return promise
+        .then((res) => res.json())
+        //return data
+        .then((data) => {
+          console.log(data)
+          let city = data.city.name
+          let temp = data.list[0].temp.day
+          y.innerText = `${city}/${temp} °C`
+        })
+      }
+    </script>
   </body>
 </html>
