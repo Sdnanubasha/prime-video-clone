@@ -6,20 +6,35 @@
     <script src="./prime.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./logo2.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
     <nav class="nav navbar-inverse navbar-fixed-top main-header">
-      <div class="container-fluid">
+      <div class="container-fluid container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#">Prime Video</a>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
+        <div id="navbar" class="collapse navbar-collapse container">
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Amazon Originals</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">Tv</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">Anime</a></li>
+              </ul>
+            </li>
+            <li><a href="#">My Stuff</a></li>
+          </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#" id="location" onclick="geolocation()"><span class="glyphicon glyphicon-map-marker"></span>Location
               <li><p id="weather"></p>
@@ -28,36 +43,16 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-globe"></span> EN<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li>
-                  <ul>
-                    <li><a href="#">Dansk</a></li>
-                    <li><a href="#">Deutch</a></li>
-                    <li><a href="#">English</a></li>
-                    <li><a href="#">Espanol</a></li>
-                    <li><a href="#">Francais</a></li>                                       
-                  </ul>
-                  <ul>
-                    <li><a href="#">Italiano</a></li>
-                    <li><a href="#">Nederlands</a></li>
-                    <li><a href="#">Norsk</a></li>
-                    <li><a href="#">Polski</a></li>
-                    <li><a href="#">Português (Brasil)</a></li>                                       
-                  </ul>
-                  <ul>
-                    <li><a href="#">Svenska</a></li>
-                    <li><a href="#">Deutch</a></li>
-                    <li><a href="#">हिन्दी</a></li>
-                    <li><a href="#">தமிழ்</a></li>
-                    <li><a href="#">తెలుగు</a></li>                                       
-                  </ul>                                                                      
-                </li>
+                <li><a href="#">हिन्दी</a></li>
+                <li><a href="#">English</a></li>
+                <li><a href="#">తెలుగు</a></li>
               </ul>
             </li>
             <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
             <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
             
           </ul>
-          <li><button id="darklight" onclick="darkmode()"><img src="./darklight.jpg" alt="darlmode"></button></li>
+          <li><a id="darklight" onclick="darkmode()"><img src="./darklight.jpg" alt="darlmode"></a></li>
           
         </div>
       </div>
