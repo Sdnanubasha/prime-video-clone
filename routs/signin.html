@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <link rel="icon" href="../images/logo2.png">
+        <title>Login page</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="../prime.js"></script>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        <!--Main Header-->
+        <nav class="nav navbar-inverse navbar-fixed-top main-header">
+            <div class="container-fluid container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Prime Video</a>
+              </div>
+              <div id="navbar" class="collapse navbar-collapse container">
+                <ul class="nav navbar-nav navbar-left">
+                  <li><a href="#" id="darklight" onclick="darkmode()"><span class="glyphicon glyphicon-adjust">Mode</span></a></li>
+                  <li><a href="../index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-globe"></span> EN<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">हिन्दी</a></li>
+                      <li><a href="#">English</a></li>
+                      <li><a href="#">తెలుగు</a></li>
+                    </ul>
+                  </li>
+                </ul>   
+              </div>
+            </div>
+          </nav>
+          <!--Login section-->
+          <div id="sign-logo">
+            <img src="../images/prime-video-logo2.png" alt="primevideo">
+          </div>
+          <form action="../" method="post" class="form">
+            <div class="container form-section">
+                
+                <div class="form-box">
+                    <h2 class="signin">Sign in</h2>
+                    <div class="form-group">
+                        <label for="emialormobile">Email or mobile number</label>
+                        <input type="text" class="form-control" name="username" id="username" placeholder="email or moblie">
+                    </div>
+                    <div class="form-group">
+                            <label for="emialormobile">Password</label>
+                            <label id="forgotpass" for="forgotpass"><a href="#">Forgot password ?</a></label>
+                        <input type="text" class="form-control" name="password" id="password" placeholder="minimun 6 letters" min="6">
+                    </div>
+                    <button type="submit" class="btn btn-primary" name="signin" id="signin" formaction="../index.html">sign in</button>
+                    <p id="terms">By Continuing, You agree to the amazon <a href="#">Conditions of Use and Privacy Notice.</a></p>
+                    <input id="terms" type="checkbox">I agree to the amazon Conditions of Use and Privacy Notice.
+                    <div class="a-divider a-divider-break">
+                      <h5>New to Amazon ?</h5>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="signup" name="signup" formaction="./signup.html">Create Account</button>
+                </div>
+            </div>
+            
+          </form>
+    </body>
+</html>

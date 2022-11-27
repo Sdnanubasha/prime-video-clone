@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="./prime.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="./logo2.png">
+    <link rel="icon" href="./images/logo2.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
@@ -22,6 +22,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse container">
           <ul class="nav navbar-nav navbar-left">
+            <li><a href="#" id="darklight" onclick="darkmode()"><span class="glyphicon glyphicon-adjust">Mode</span></a></li>
             <li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories<span class="caret"></span></a>
@@ -34,12 +35,14 @@
               </ul>
             </li>
             <li><a href="#">My Stuff</a></li>
+            
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#" id="location" onclick="geolocation()"><span class="glyphicon glyphicon-map-marker"></span>Location
-              <li><p id="weather"></p>
-              </li>
+              
             </a></li>
+            <li><a href="#"><p id="weather"></p></a>
+            </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-globe"></span> EN<span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -48,11 +51,11 @@
                 <li><a href="#">తెలుగు</a></li>
               </ul>
             </li>
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
+            <li><a href="./routs/signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="./routs/signin.html"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
             
           </ul>
-          <li><a id="darklight" onclick="darkmode()"><img src="./darklight.jpg" alt="darlmode"></a></li>
+          
           
         </div>
       </div>
@@ -91,7 +94,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-offset-7 col-sm-5 right-sidebar cta-block-button">
-            <h1>Great Entertainment</h1>
+            <h1><span>Great Entertainment</span> </h1>
             <h4>With your Prime membership, you have access to exclusive Amazon Originals, blockbuster Bollywood movies.</h4>
             <button type="button" class="btn btn-primary">Get Started</button>
           </div>
@@ -140,7 +143,7 @@
           </div>
 
           <div class="col-sm-4">
-            <img id="img-journey" src="./journey.png" alt="image" class="img-responsive">
+            <img id="img-journey" src="./images/journey.png" alt="image" class="img-responsive">
             <h1>Download and go</h1>
             <p>Watch offline on the Prime Video app when you download titles to your iPhone, 
                 iPad, Tablet, or Android device
@@ -160,7 +163,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-6 left-sidebar cta-block-button">
-            <h1>Family Friendly</h1>
+            <h1><span>Family Friendly</span> </h1>
             <h4>With easy to use Parental Controls and a dedicated kids page, enjoy secure, 
                 ad-free kids entertainment. Kids can enjoy popular TV shows like Peppa Pig,
                 Powerpuff Girls, and Chhota Bheem.
@@ -175,7 +178,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-offset-7 col-sm-5 right-sidebar cta-block-button">
-            <h1>Watch Anime</h1>
+            <h1><span>Watch Anime</span></h1>
             <p>With easy to use Parental Controls and a Anime page, enjoy secure, 
               ad-free entertainment. Everyone can enjoy popular TV shows like One Piece,
               Naruto, and Dragon ball z.
