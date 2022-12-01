@@ -348,9 +348,13 @@ button:hover{
 }
 .form-control{
     width: 95%;
+    border-radius: 0;
 }
 .form-box{
     margin-left:5%;
+}
+.form-box button{
+    border-radius: 0%;
 }
 #terms{
     margin-top: 3%;
